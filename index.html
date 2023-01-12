@@ -26,8 +26,10 @@
         <div id="root" class="container-fluid d-flex">
             <!-- Parte dedicata alla ricerca delle chat e le anteprime -->
             <div class="sidenav">
-                <header id="header-left" class="px-3 d-flex align-items-center justify-content-between">
-                    
+                <header id="header-left">
+
+                  <!-- Qui metto tutto cià che riguarda il MIO profilo    -->
+                  <section class="avatar-wrapper d-flex align-items-center justify-content-between px-3 py-2">
                     <div class="my-user">
                         <img src="img/avatar_1.jpg" alt="" class="img-fluid">
                         <span class="ps-2 fw-bold">Nome utente</span>
@@ -38,6 +40,17 @@
                         <i class="fa-solid fa-message"></i>
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
+                  </section>  
+                    
+                  <!-- Qui metto la sezione dedicata alle notifiche  -->
+                  <section class="notifications d-flex align-items-center px-3 py-2">
+                    <i class="fa-solid fa-bell-slash" id="notifications-icon"></i>
+                    <div class="notifications-text ps-3 lh-1">
+                        <div>ricevi notifiche di nuovi messaggi</div>
+                        <sub role="button" class="text-decoration-underline">Attiva notifiche desktop</sub>
+                    </div>
+                  </section>
+
 
                 </header>
 
