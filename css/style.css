@@ -1,3 +1,14 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
 body {
     height: 100vh;
 
@@ -14,8 +25,25 @@ body {
     align-items: center;
 }
 
-main {
+#root {
     background-color: #fff;
     height: 90%;
     width: 75%;
+    padding: 0;
 }
+
+/* The sidebar menu */
+.sidenav {
+    height: 100%;
+    width: 40%;
+    background-color: gray;
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+  
+  /* Style page content */
+  .main {
+    padding: 0px 10px;
+  }
+  
+  
