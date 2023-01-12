@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
 
 body {
     height: 100vh;
@@ -35,14 +31,26 @@ body {
 
 .sidenav {
     height: 100%;
-    width: 30%;
+    width: 40%;
     background-color: #fff;
     position: relative;
 }
 
 .sidenav p {
-    height: calc(100% - 75px);
+    height: calc(100% - 90px);
     overflow-y: auto;
+}
+
+.sidenav img {
+    height: 75px;
+    border-radius: 50%;
+}
+
+.my-user-icons > * {
+    font-size: 25px;
+    color: #B1B1B1;
+    padding: 0 5px;
+    cursor: pointer;
 }
 
 .main {
@@ -54,21 +62,21 @@ body {
 #header-left {
     background-color: #EAEAEA;
  
-    height: 75px;
+    height: 90px;
     padding: 0;
     position: relative;
     top: 0;
     left: 0;
     right: 0;
- }
+}
 
- #header-right {
+#header-right {
     background-color: #EAEAEA;
  
     border: 1px solid black;
     height: 75px;
 
- }
+}
 
 main {
     height: calc(100% - 150px);
