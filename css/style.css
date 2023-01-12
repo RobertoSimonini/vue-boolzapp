@@ -130,5 +130,12 @@ main {
 footer {
     background-color: #EAEAEA;
  
+    text-align: center;
     height: 90px;
+}
+
+footer i {
+    font-size: 25px;
+    color: lightslategray; 
+    cursor: pointer;
 }
