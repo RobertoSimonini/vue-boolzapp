@@ -1,0 +1,16 @@
+body {
+
+    height: 100vh;
+
+    background: linear-gradient(
+        to bottom,
+        #009688, 10%,
+        #009688, 10%,
+        #DADBD4,
+        #DADBD4
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
