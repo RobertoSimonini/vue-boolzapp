@@ -1,9 +1,12 @@
+/* Css reset  */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+
+/* Generics  */
 
 body {
     height: 100vh;
@@ -21,6 +24,16 @@ body {
     align-items: center;
 }
 
+/* Utils  */
+
+.chat-userName {
+    padding-left: 10px;
+    position: absolute;
+    font-size: 18px;
+}
+
+/* Root  */
+
 #root {
     background-color: #fff;
     height: 90%;
@@ -29,6 +42,8 @@ body {
     position: relative;
 }
 
+/* SIdenav generics */
+
 .sidenav {
     height: 100%;
     width: 40%;
@@ -36,10 +51,6 @@ body {
     position: relative;
 }
 
-.sidenav p {
-    height: calc(100% - 180px);
-    overflow-y: auto;
-}
 
 .sidenav img {
     height: 75px;
@@ -57,7 +68,7 @@ body {
     width: 100%;
 }
 
-/* Left Header section  */
+/* Sidebar sections  */
 
 .avatar-wrapper {
     background-color: #EAEAEA;
@@ -79,6 +90,12 @@ body {
     text-align: center;
     border-radius: 50%;
 }
+
+#chat-avatars {
+    height: calc(100% - 180px);
+    overflow-y: auto;
+}
+
 
 /* Headers */
   
