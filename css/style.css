@@ -36,6 +36,17 @@ body {
     font-size: 18px;
 }
 
+.my-message {
+    background-color: #D5F9BA;
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+
+.user-message {
+    background-color: #FFFF;
+    padding: 15px 10px;
+    border-radius: 10px;
+}
 /* Root  */
 
 #root {
