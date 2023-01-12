@@ -13,8 +13,8 @@ body {
 
     background: linear-gradient(
         to bottom,
-        #009688, 15%,
-        #009688, 15%,
+        #009688, 10%,
+        #009688, 10%,
         #DADBD4,
         #DADBD4
     );
@@ -26,6 +26,10 @@ body {
 
 /* Utils  */
 
+.chat-preview {
+    border-bottom: 0.25px solid #EAEAEA;
+}
+
 .chat-userName {
     padding-left: 10px;
     position: absolute;
@@ -36,10 +40,11 @@ body {
 
 #root {
     background-color: #fff;
-    height: 90%;
+    height: 95%;
     width: 75%;
     padding: 0;
     position: relative;
+    overflow-y: hidden;
 }
 
 /* SIdenav generics */
@@ -49,15 +54,16 @@ body {
     width: 40%;
     background-color: #fff;
     position: relative;
+
+    border-right: 0.5px solid lightslategray;
 }
 
-
-.sidenav img {
+.sidenav img, #user-info img {
     height: 75px;
     border-radius: 50%;
 }
 
-.my-user-icons > * {
+.my-user-icons > *, #header-right-icons > * {
     font-size: 25px;
     color: #B1B1B1;
     padding: 0 5px;
@@ -66,6 +72,8 @@ body {
 
 .main {
     width: 100%;
+    background-image: url(../img/mine.jpg);
+    background-position: center;
 }
 
 /* Sidebar sections  */
@@ -110,19 +118,17 @@ body {
 #header-right {
     background-color: #EAEAEA;
  
-    border: 1px solid black;
-    height: 75px;
+    height: 90px;
 
 }
 
 main {
-    height: calc(100% - 150px);
+    height: calc(100% - 180px);
     overflow-y: auto;
 }
 
 footer {
     background-color: #EAEAEA;
  
-    border: 1px solid black;
-    height: 75px;
+    height: 90px;
 }
