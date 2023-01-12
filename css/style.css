@@ -32,18 +32,18 @@ body {
     padding: 0;
 }
 
-/* The sidebar menu */
 .sidenav {
     height: 100%;
-    width: 40%;
+    width: 30%;
     background-color: gray;
+    overflow-x: hidden;
     padding-top: 20px;
-    padding-left: 10px;
-  }
+    padding-left: 15px;
+}
   
-  /* Style page content */
-  .main {
+
+.main {
     padding: 0px 10px;
-  }
+}
   
   
