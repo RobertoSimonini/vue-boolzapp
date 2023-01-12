@@ -30,20 +30,54 @@ body {
     height: 90%;
     width: 75%;
     padding: 0;
+    position: relative;
 }
 
 .sidenav {
     height: 100%;
     width: 30%;
-    background-color: gray;
-    overflow-x: hidden;
-    padding-top: 20px;
-    padding-left: 15px;
+    background-color: #fff;
+    position: relative;
 }
-  
+
+.sidenav p {
+    height: calc(100% - 75px);
+    overflow-y: auto;
+}
 
 .main {
-    padding: 0px 10px;
+    width: 100%;
 }
+
+/* Headers */
   
-  
+#header-left {
+    background-color: #EAEAEA;
+ 
+    height: 75px;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+ }
+
+ #header-right {
+    background-color: #EAEAEA;
+ 
+    border: 1px solid black;
+    height: 75px;
+
+ }
+
+main {
+    height: calc(100% - 150px);
+    overflow-y: auto;
+}
+
+footer {
+    background-color: #EAEAEA;
+ 
+    border: 1px solid black;
+    height: 75px;
+}
