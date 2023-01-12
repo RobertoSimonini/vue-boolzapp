@@ -1,11 +1,10 @@
 body {
-
     height: 100vh;
 
     background: linear-gradient(
         to bottom,
-        #009688, 10%,
-        #009688, 10%,
+        #009688, 15%,
+        #009688, 15%,
         #DADBD4,
         #DADBD4
     );
@@ -13,4 +12,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+main {
+    background-color: #fff;
+    height: 90%;
+    width: 75%;
 }
