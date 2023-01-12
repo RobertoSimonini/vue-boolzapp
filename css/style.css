@@ -28,6 +28,12 @@ body {
 
 .chat-preview {
     border-bottom: 0.25px solid #EAEAEA;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.chat-preview:hover {
+    background-color: #EAEAEA;
 }
 
 .chat-userName {
