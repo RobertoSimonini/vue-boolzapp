@@ -42,18 +42,21 @@ body {
     font-size: 18px;
 }
 
-.my-message {
+.sent {
     background-color: #D5F9BA;
     padding: 15px 10px;
     border-radius: 10px;
 }
 
-.user-message {
+.received {
     background-color: #FFFF;
     padding: 15px 10px;
     border-radius: 10px;
+    
 }
+
 /* Root  */
+
 
 #root {
     background-color: #fff;

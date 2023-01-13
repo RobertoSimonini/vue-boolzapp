@@ -55,25 +55,27 @@
                     <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username">
                   </section>
                 </header>
-
+                <!-- Qui metto la sezione dedicata agli avatar e il name delle chat  -->
                 <section  id="chat-avatars" class="px-3">
-                    <div v-for="(contact, i) in contacts" class="chat-preview py-1">
+                    <div v-for="(contact, i) in contacts" class="chat-preview py-1" @click="setCurrentIndex(i)">
                         <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                         <span class="chat-userName"> {{contact.name}} </span>
-                    </div>
-                    
+                        
+                    </div>       
                 </section>         
             </div>
 
             <!-- Parte centrale ove ci saranno le vere e proprie chat  -->
             <div class="main">
+
+                <!-- Heder della chat  -->
                 <header id="header-right" class="px-3 py-2">
                     <div id="user-info" class="d-flex align-items-center justify-content-between">
                         <div class="last-access d-flex align-items-center">
-                            <img src="img/avatar_1.jpg" alt="" class="img-fluid">
+                            <img :src="`img/avatar${contacts[currentIndex].avatar}.jpg`" alt="" class="img-fluid">
                             <div class="ps-2">
-                                <div>Michele</div>
-                                <div>Ultimo accesso oggi alle</div>
+                                <div>{{contacts[currentIndex].name}}</div>
+                                <div>Ultimo accesso oggi alle:</div>
                             </div>
                         </div>
 
@@ -86,22 +88,23 @@
                     </div>
                 </header>
 
+                <!-- Chat intera con i messagi spediti e ricevuti  -->
                 <main class="px-3">
-                    <div class="row px-5 py-4">
-                        <div class="offset-9 col-3 my-message mb-3">
-                            Hai portato a spasso il cane?
-                            
+                    <div v-for="(contact, i) in contacts" class="row px-5 py-4 d-flex flex-column" id="test">
+                        <div v-for="(message, i) in contact.messages" v-show="message.status === 'sent'" class="offset-9 col-3 sent mb-3">
+                            {{message.text}}
                         </div>
-                        <div class="offset-9 col-3 my-message">
-                            Ricordati di dargli da mangiare
-                        </div>
+                        
 
-                        <div class="col-3 user-message">
-                            Hai portato a spasso il cane?
+                        <div v-for="(message, i) in contact.messages" v-show="message.status === 'received'" class="col-3 mb-3 received">
+                           
+                            {{message.text}}
                         </div>
+                        
                     </div>
                 </main>
 
+                <!-- Parte in cui posso inviare i messaggi  -->
                 <footer class="px-3">
                     <div class="row h-100 d-flex align-items-center">   
 
@@ -110,7 +113,7 @@
                         </div>
 
                         <div class="col-10 h-100 d-flex align-items-center">
-                            <input type="text" class="form-control h-75" placeholder="Scrivi un messaggio" aria-label="Username">
+                            <input v-model="newMessage.text" type="text" class="form-control h-75" placeholder="Scrivi un messaggio" aria-label="Username" @keyup.enter="sendAMessage">
                         </div>
 
                         <div class="col-1">
@@ -118,6 +121,8 @@
                         </div>
                     </div>
                 </footer>
+
+
             </div>
         </div>
 
