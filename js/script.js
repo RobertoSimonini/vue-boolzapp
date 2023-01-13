@@ -98,7 +98,7 @@ const app = Vue.createApp({
     methods : {
       sendAMessage () {
         if (this.newMessage.text) {
-          this.contacts.messages[1].push(this.newMessage);
+          this.contacts[this.currentIndex].messages.push(this.newMessage);
           this.newMessage = {
             date:'10/10/10',
             text: '',
