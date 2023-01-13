@@ -3,18 +3,19 @@ const app = Vue.createApp({
     data () {
         return {
           currentIndex : 0,
+          searchChat : '',
             user: {
                 name: 'Anna ',
                 avatar: '_io'
               },
               newMessage : {
-                date:'10/10/10',
+                date: new Date().toLocaleDateString("it"),
                 text: '',
                 status: 'sent'
               },
 
               newReceivedMessage : {
-                date: '10/10/10',
+                date: new Date().toLocaleDateString("it"),
                 text: 'ok',
                 status: 'received'
               },
@@ -100,13 +101,20 @@ const app = Vue.createApp({
                 },
               ]
         }
-    }, 
+    },
+    
+    computed : {
+      filteredChat () {
+        return this.contacts.filter (contact => contact.name.includes(this.searchChat))
+      }
+    },
+
     methods : {
       sendAMessage () {
         if (this.newMessage.text) {
           this.contacts[this.currentIndex].messages.push(this.newMessage);
           this.newMessage = {
-            date:'10/10/10',
+            date: new Date().toLocaleDateString("it"),
             text: '',
             status: 'sent'
           };
