@@ -5,6 +5,7 @@ const app = Vue.createApp({
           currentIndex : 0,
           searchChat : '',
           searchInChat : '',
+          searchStatus : false,
             user: {
                 name: 'Roberto ',
                 avatar: '_io'
@@ -142,6 +143,10 @@ const app = Vue.createApp({
 
       removeMessage (i) {
         this.contacts[this.currentIndex].messages.splice(i, 1)
+      },
+
+      toggleStatus () {
+        this.searchStatus = !this.searchStatus;
       }
     }
 
