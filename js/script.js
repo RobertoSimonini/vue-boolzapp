@@ -105,7 +105,7 @@ const app = Vue.createApp({
     
     computed : {
       filteredChat () {
-        return this.contacts.filter (contact => contact.name.includes(this.searchChat))
+        return this.contacts.filter (contact => contact.name.toLowerCase().includes(this.searchChat))
       }
     },
 
