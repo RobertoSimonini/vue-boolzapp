@@ -52,7 +52,7 @@
 
                   <!-- Qui metto la sezione dedicata alla ricerca della chat  -->
                   <section class="input-group flex-nowrap my-2 px-2">
-                    <input v-model="searchChat" type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username">
+                    <input v-model.trim="searchChat" type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username">
                   </section>
                 </header>
                 <!-- Qui metto la sezione dedicata agli avatar e il name delle chat  -->
