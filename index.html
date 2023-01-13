@@ -60,7 +60,7 @@
                     <div v-for="(contact, i) in filteredChat" class="chat-preview py-1" @click="setCurrentIndex(contact.id)">
                         <divc class="d-flex">
                             <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
-                            <div class="chat-userName py-3"> {{contact.name}} </div>
+                            <div class="chat-userName py-2"> {{contact.name}} </div>
                             
                         </divc>          
                     </div>       
@@ -77,7 +77,7 @@
                             <img :src="`img/avatar${contacts[currentIndex].avatar}.jpg`" alt="" class="img-fluid">
                             <div class="ps-2">
                                 <div>{{contacts[currentIndex].name}}</div>
-                                <div>Ultimo accesso oggi alle:</div>
+                                <div class="fw-light">Ultimo accesso oggi alle:</div>
                             </div>
                         </div>
 
@@ -95,17 +95,25 @@
                     <div v-for="(message, i) in contacts[currentIndex].messages" class="row px-5 py-1 d-flex flex-column" id="test">
                         <div  v-show="message.status === 'sent'" class="offset-9 col-3 sent">
                             {{message.text}}
-                            <sub class="fw-light date">
-                                {{message.date}}
-                            </sub>
+
+                            <div class="message-bottom">
+                                <button class="btn btn-danger mx-2 remove-button" @click="removeMessage(i)"><i class="fa-solid fa-trash-arrow-up fa-lg"></i></button>
+                                <sub class="fw-light">
+                                    {{message.date}}
+                                </sub>
+                            </div>
+
                         </div>
                         
 
                         <div v-show="message.status === 'received'" class="col-3 received">
                             {{message.text}}
-                            <sub class="fw-light date">
-                                {{message.date}}
-                            </sub>
+                            <div class="message-bottom">
+                                <button class="btn btn-danger mx-2 remove-button" @click="removeMessage(i)"><i class="fa-solid fa-trash-arrow-up fa-lg"></i></button>
+                                <sub class="fw-light">
+                                    {{message.date}}
+                                </sub>
+                            </div>
                         </div>
                         
                     </div>

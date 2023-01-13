@@ -132,6 +132,10 @@ const app = Vue.createApp({
 
       setCurrentIndex (i) {
         this.currentIndex = i;
+      },
+
+      removeMessage (i) {
+        this.contacts[this.currentIndex].messages.splice(i, 1)
       }
     }
 

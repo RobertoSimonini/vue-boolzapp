@@ -57,10 +57,14 @@ body {
     
 }
 
-.date {
+.massage-bottom {
     position: absolute;
     right: 10px;
     bottom: 10px;
+}
+
+.remove-button {
+    font-size: 10px;
 }
 
 /* Root  */
