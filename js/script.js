@@ -21,6 +21,7 @@ const app = Vue.createApp({
               },
               contacts: [
                 {
+                  id: 0,
                   name: 'Michele',
                   avatar: '_1',
                   visible: true,
@@ -42,6 +43,7 @@ const app = Vue.createApp({
                   ],
                 },
                 {
+                  id: 1,
                   name: 'Fabio',
                   avatar: '_2',
                   visible: true,
@@ -63,6 +65,7 @@ const app = Vue.createApp({
                   ],
                 },
                 {
+                  id: 2,
                   name: 'Samuele',
                   avatar: '_3',
                   visible: true,
@@ -84,6 +87,7 @@ const app = Vue.createApp({
                   ],
                 },
                 {
+                  id: 3,
                   name: 'Luisa',
                   avatar: '_4',
                   visible: true,
@@ -105,7 +109,8 @@ const app = Vue.createApp({
     
     computed : {
       filteredChat () {
-        return this.contacts.filter (contact => contact.name.toLowerCase().includes(this.searchChat))
+        return this.contacts.filter (contact => contact.name.toLowerCase().includes(this.searchChat)) 
+        
       }
     },
 
