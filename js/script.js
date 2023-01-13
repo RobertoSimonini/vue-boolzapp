@@ -12,6 +12,12 @@ const app = Vue.createApp({
                 text: '',
                 status: 'sent'
               },
+
+              newReceivedMessage : {
+                date: '10/10/10',
+                text: 'ok',
+                status: 'received'
+              },
               contacts: [
                 {
                   name: 'Michele',
@@ -104,6 +110,10 @@ const app = Vue.createApp({
             text: '',
             status: 'sent'
           };
+
+          setTimeout (() => {
+            this.contacts[this.currentIndex].messages.push(this.newReceivedMessage);
+          }, 1000)
         }
       },
 
@@ -111,6 +121,8 @@ const app = Vue.createApp({
         this.currentIndex = i;
       }
     }
+
+
 })
     
 app.mount('#root');
