@@ -5,7 +5,7 @@ const app = Vue.createApp({
           currentIndex : 0,
           searchChat : '',
             user: {
-                name: 'Anna ',
+                name: 'Roberto ',
                 avatar: '_io'
               },
               newMessage : {

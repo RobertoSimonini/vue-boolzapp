@@ -58,10 +58,11 @@
                 <!-- Qui metto la sezione dedicata agli avatar e il name delle chat  -->
                 <section  id="chat-avatars" class="px-3">
                     <div v-for="(contact, i) in filteredChat" class="chat-preview py-1" @click="setCurrentIndex(contact.id)">
-                        <div>
+                        <divc class="d-flex">
                             <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
-                            <span class="chat-userName"> {{contact.name}} </span>
-                        </div>          
+                            <div class="chat-userName py-3"> {{contact.name}} </div>
+                            
+                        </divc>          
                     </div>       
                 </section>         
             </div>
