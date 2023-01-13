@@ -4,6 +4,7 @@ const app = Vue.createApp({
         return {
           currentIndex : 0,
           searchChat : '',
+          searchInChat : '',
             user: {
                 name: 'Roberto ',
                 avatar: '_io'
@@ -111,7 +112,12 @@ const app = Vue.createApp({
       filteredChat () {
         return this.contacts.filter (contact => contact.name.toLowerCase().includes(this.searchChat)) 
         
+      },
+
+      filteredMessage () {
+        return this.contacts[this.currentIndex].messages.filter (message => message.text.toLowerCase().includes(this.searchInChat));
       }
+
     },
 
     methods : {

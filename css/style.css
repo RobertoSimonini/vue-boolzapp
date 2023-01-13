@@ -51,13 +51,13 @@ body {
 
 .received {
     background-color: #FFFF;
-    padding: 20px 10px;
+    padding: 10px;
     border-radius: 10px;
     position: relative;
     
 }
 
-.massage-bottom {
+.date {
     position: absolute;
     right: 10px;
     bottom: 10px;
