@@ -145,18 +145,10 @@ const app = Vue.createApp({
         this.currentIndex = i;
       },
 
-      removeMessage (i) {
-        this.contacts[this.currentIndex].messages.splice(i, 1)
-      },
-
       toggleStatus () {
         this.searchStatus = !this.searchStatus;
         this.searchInChat = '';
       },
-
-      toggleMessageStatus (i) {
-        this.removeMessageStatus[i] = !this.removeMessageStatus[i];
-      }
     }
 
 

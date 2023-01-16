@@ -18,7 +18,7 @@
 
     <!-- Luxon  -->
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js"></script>
-    
+
     <!-- Vue  -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     
@@ -110,14 +110,6 @@
                             <!-- Qui metto la parte dedicata alla data e alla rimozione dei mex  -->
 
                             <div class="message-bottom d-flex">
-                                <div class="dropdown">
-                                    <a @click="toggleMessageStatus(i)" class="dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">      
-                                    </a>
-                                  
-                                    <ul v-show="removeMessageStatus[i]" class="message-actions">
-                                      <li @click="removeMessage(i)"><a class="dropdown-item text-danger" href="#">Rimuovi il messaggio</a></li>
-                                    </ul>
-                                </div>
                                     <sub class="fw-light date">
                                         {{message.date}}
                                     </sub>
@@ -131,14 +123,6 @@
 
 
                             <div class="message-bottom d-flex">
-                                <div class="dropdown">
-                                    <a @click="toggleMessageStatus(i)" class="dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">      
-                                    </a>
-                                  
-                                    <ul v-show="removeMessageStatus[i]" class="message-actions">
-                                      <li @click="removeMessage(i)"><a class="dropdown-item text-danger" href="#">Rimuovi il messaggio</a></li>
-                                    </ul>
-                                </div>
                                     <sub class="fw-light date">
                                         {{message.date}}
                                     </sub>

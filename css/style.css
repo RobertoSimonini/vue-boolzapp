@@ -41,20 +41,19 @@ body {
     font-size: 18px;
 }
 
+.sent, .received {
+    padding: 20px 10px;
+    position: relative;
+    border-radius: 10px;
+
+}
 .sent {
     background-color: #D5F9BA;
-    padding: 20px 10px;
-    border-radius: 10px;
-    position: relative;
+    
 }
-
 
 .received {
     background-color: #FFFF;
-    padding: 10px;
-    border-radius: 10px;
-    position: relative;
-    
 }
 
 .date {
