@@ -6,6 +6,7 @@ const app = Vue.createApp({
           searchChat : '',
           searchInChat : '',
           searchStatus : false,
+          removeMessageStatus : {},
             user: {
                 name: 'Roberto ',
                 avatar: '_io'
@@ -147,6 +148,11 @@ const app = Vue.createApp({
 
       toggleStatus () {
         this.searchStatus = !this.searchStatus;
+        this.searchInChat = '';
+      },
+
+      toggleMessageStatus (i) {
+        this.removeMessageStatus[i] = !this.removeMessageStatus[i];
       }
     }
 
