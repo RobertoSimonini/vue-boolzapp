@@ -1,4 +1,7 @@
 
+const dt = luxon.DateTime;
+
+
 const app = Vue.createApp({
     data () {
         return {
@@ -12,13 +15,13 @@ const app = Vue.createApp({
                 avatar: '_io'
               },
               newMessage : {
-                date: new Date().toLocaleDateString("it"),
+                date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                 text: '',
                 status: 'sent'
               },
 
               newReceivedMessage : {
-                date: new Date().toLocaleDateString("it"),
+                date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                 text: 'ok',
                 status: 'received'
               },
@@ -127,7 +130,7 @@ const app = Vue.createApp({
         if (this.newMessage.text) {
           this.contacts[this.currentIndex].messages.push(this.newMessage);
           this.newMessage = {
-            date: new Date().toLocaleDateString("it"),
+            date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
             text: '',
             status: 'sent'
           };
