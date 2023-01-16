@@ -137,6 +137,11 @@ const app = Vue.createApp({
 
           setTimeout (() => {
             this.contacts[this.currentIndex].messages.push(this.newReceivedMessage);
+            this.newReceivedMessage = {
+              date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+            text: '',
+            status: 'received'
+            }
           }, 1000)
         }
       },
